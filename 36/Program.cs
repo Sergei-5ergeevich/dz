@@ -31,10 +31,10 @@ void PrintArray(int[] col)
 FillArray(array);
 PrintArray(array);
 
-int sum = 0;
-for(int i = 0; i < array.Length; i++)
+int sum = array[0];
+for(int i = 1; i < array.Length; i++)
 {
-if(i % 2 > 0) sum=sum+array[i];
+if(i % 2 == 0) sum=sum+array[i];
 }
 
 Console.WriteLine($"Сумма элементов стоящих на нечетных позициях в массиве: {sum}");
