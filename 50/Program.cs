@@ -40,8 +40,8 @@ Console.Write("Введите индекс строки: ");
 int indexrow = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите индекс столбца: ");
 int indexcolumn = Convert.ToInt32(Console.ReadLine());
-
-if (indexrow < coll.GetLength(0) && indexcolumn < coll.GetLength(1))
+indexrow -=1; indexcolumn -=1;
+if (indexrow <= coll.GetLength(0) && indexcolumn <= coll.GetLength(1))
 {
     Console.WriteLine(coll[indexrow, indexcolumn]);
 }
